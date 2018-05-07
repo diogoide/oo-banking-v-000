@@ -17,11 +17,11 @@ class Transfer
   end
 
   def both_valid?
-    @sender.valid? && @receiver.valid? ? true : false 
-  end 
+    @sender.valid? && @receiver.valid? ? true : false
+  end
 
   def execute_transaction
-   if self.both_valid? && self.status != "complete" && @sender.balance > @amount 
+   if self.both_valid? && self.status != "complete" && @sender.balance > @amount
       @sender.balance -= @amount
       @receiver.balance += @amount
       self.status = "complete"
