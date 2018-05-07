@@ -10,8 +10,6 @@ class Transfer
 
   def valid?
     true if @sender.bankaccount.valid? && @receiver.account.valid?
-  else
-    false
     end
-  end 
+  end
 end
