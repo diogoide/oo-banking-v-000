@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    if @sender.status == "open" && @sender.balance > 0 && @receiver.status == "open" && @receiver.balance > 0
+    if @sender.valid? && @receiver.valid?
       true
     else
       false
